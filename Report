@@ -1,0 +1,30 @@
+The hypotheses for this project were that the age, number of children, BMI and smoking status had an impact on the charges. 
+
+The goals and steps to confirm or infirm this hypothesis were as follows:
+- Get the minimum, maximum and average for the age, BMI, children and charges
+- Count the smokers/non smokers and the male/females
+- Categorise by region
+- Categorise per age, children, BMI, smoking status and sex
+
+These steps would help in the identification of the potential bias in the dataset and to allow a thorough analysis of the data in its various aspects. They would have also helped to see potential correlations between other criteria. 
+
+Methodology:
+The dataset was composed of a CSV file with 1338 entries. First, an ID was added for each entry, a dictionary (insurance_dictionary was created) and a list was made for each criterium.
+A class was made to calculate minimum, maximum and average. A function was made to count males and females and another to count smokers. Another was made to count regions, and another to create dictionaries for each region. This function served as a template to create the dictionaries for each criterium analysed (BMI, Charges, Age, Smokers, Sex, Children). A class was made to create lists for each criterium, based on these region-based dictionaries. This class was then used for all the criterium-based dictionaries. These were later made in this order: sex, BMI per quartile (counted in an outside program), charges per quartile, children, smoking status and age.
+
+The results:
+Potential bias:
+First, some potential bias, or dataset anomalies, were noted. There are more people from the Southeast than from other regions in the dataset (364 compared to 324 or 325 entries for the other regions). There are slightly more males (676) than females (662) in the dataset. The dataset is biased towards people without children (574 entries, or 43 per cent. of the dataset).
+
+Hypothesis that could not be verified:
+It was not possible to verify if the number of children had a substantial impact on the charges. Indeed, while the minimum charges increase per number of children, that is only the case for average and maximum until three children. This might be due to bias in the dataset towards people with three children or less, as the number of people with four and five children is very limited compared to the others (25 and 18, or 2 and 1 per cents. respectively). 
+
+Hypotheses verified:
+It appears that age, BMI and smoking status have a substantial impact on the charges. Indeed, non-smokers, lower to lower medium ages and lower to lower medium BMI have the lowest charges per average, under the full dataset average. The smoking status appears to have a very significant impact, as the non-smoker maximum is much lower (36911) than the smoker maximum (63770), with all the lowest and average numbers also being significantly lower. The BMI has an impact, although slightly less significant, as the minimum and average follow accordingly the growth of the BMI, but the maximum is not as consistent. The growth of the minimum, average and maximum charges are also consistent with the age. 
+
+Potential things to explore:
+The impact of the sex on charges is unclear. Indeed, while females have a lower average, they also have a higher maximum and a higher minimum, despite having a lower percentage of smokers and a lower BMI on average. 
+The impact of the region is also unclear. While the Southeast has higher charges both in average and in maximum, they have the lowest minimum, and also happen to have the highest rate of smokers and a significantly higher BMI. As mentioned earlier, this region also has the highest number of entries. 
+These two aspects would require further analyses using other datasets, or other statistical data, to identify anomalies and to determine for certain their impact on charges. 
+
+Maelle Le Roux, December 2020/January 2021
